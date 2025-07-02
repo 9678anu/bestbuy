@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Buy Support Helpline</title>
+    <style>
+        body {
+            font-family: 'Poppins', 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to right, #003087, #0046be);
+            color: #fff;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            margin: 0;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            color: #003087;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .card h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #0046be;
+        }
+        .card p {
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+        .card ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+        }
+        .card ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #0046be;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #0046be;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 70, 190, 0.1);
+        }
+        .btn:hover {
+            background: #003087;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 70, 190, 0.15);
+        }
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            fill: currentColor;
+        }
+        .floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #0046be;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .floating-btn:hover {
+            background: #003087;
+            transform: scale(1.1);
+        }
+        .floating-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #003087;
+            color: white;
+            border-radius: 12px 12px 0 0;
+            margin-top: 50px;
+        }
+        .footer p {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .header p {
+                font-size: 1rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .card h2 {
+                font-size: 1.5rem;
+            }
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .floating-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/180x50?text=Best+Buy+Logo" alt="Best Buy Logo">
+            <h1>Best Buy Support Center</h1>
+            <p>Expert technical support for all your devices and appliances</p>
+        </div>
+
+        <div class="card">
+            <h2>Welcome to Best Buy Support</h2>
+            <p>Our dedicated support team is available 24/7 to help with any technical issues, product setup, or general inquiries about your Best Buy products and services.</p>
+            <a href="tel:18082039863" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                </svg>
+                Call Best Buy Support
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Geek Squad Services</h2>
+            <p>Our certified Geek Squad technicians provide comprehensive support for all your technology needs:</p>
+            <ul>
+                <li>Device setup and installation</li>
+                <li>Hardware and software troubleshooting</li>
+                <li>Home theater and smart home configuration</li>
+                <li>Computer and appliance repairs</li>
+                <li>Protection plan support</li>
+                <li>Order and account assistance</li>
+            </ul>
+            <a href="tel:18082039863" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                </svg>
+                Call Best Buy Support
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Technical Support</h2>
+            <p>Get expert help with any technical issues you're experiencing with your Best Buy products:</p>
+            <ul>
+                <li>Connectivity and network issues</li>
+                <li>Software compatibility problems</li>
+                <li>Device performance optimization</li>
+                <li>Smart home device support</li>
+                <li>Warranty and protection plan claims</li>
+            </ul>
+            <a href="tel:18082039863" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                </svg>
+                Call Best Buy Support
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Product Support</h2>
+            <p>We offer specialized support for all product categories purchased at Best Buy:</p>
+            <ul>
+                <li>TVs and home theater systems</li>
+                <li>Computers, tablets, and phones</li>
+                <li>Appliances and smart home devices</li>
+                <li>Cameras and audio equipment</li>
+                <li>Gaming consoles and accessories</li>
+            </ul>
+            <a href="tel:18082039863" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                </svg>
+                Call Best Buy Support
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Account & Order Support</h2>
+            <p>Need help with your Best Buy account or recent order? Our support team can assist with:</p>
+            <ul>
+                <li>Order status and tracking</li>
+                <li>Returns and exchanges</li>
+                <li>Payment and financing questions</li>
+                <li>My Best Buy membership</li>
+                <li>Account security and recovery</li>
+            </ul>
+            <a href="tel:18082039863" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                </svg>
+                Call Best Buy Support
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Important Information</h2>
+            <p>For your security, please note that Best Buy will never request sensitive information like passwords or payment details through unsolicited calls or emails.</p>
+            <p>Always verify you're contacting official Best Buy support through our verified channels listed on BestBuy.com.</p>
+            <a href="tel:18082039863" class="btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                </svg>
+                Call Best Buy Support
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Best Buy Co., Inc. All rights reserved.</p>
+            <p>Best Buy and Geek Squad are registered trademarks of Best Buy and its affiliates.</p>
+            <p>For official support, visit BestBuy.com/support</p>
+        </div>
+
+        <a href="tel:18082039863" class="floating-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66a.977.977 0 0 0 .24-1.02c-.36-1.12-.56-2.31-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>
